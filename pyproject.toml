@@ -7,7 +7,7 @@ name = "enviroplus"
 dynamic = ["version", "readme"]
 description = "Enviro pHAT Plus environmental monitoring add-on for Raspberry Pi"
 license = {file = "LICENSE"}
-requires-python = ">= 3.7"
+requires-python = ">= 3.9"
 authors = [
     { name = "Philip Howard", email = "phil@pimoroni.com" },
 ]
@@ -41,7 +41,14 @@ dependencies = [
     "pms5003 >= 1.0.1",
     "ltr559 >= 1.0.0",
     "st7735 >= 1.0.0",
-    "ads1015 >= 1.0.0"
+    "ads1015 >= 1.0.0",
+    "fonts",
+    "font-roboto",
+    "astral",
+    "pytz",
+    "sounddevice",
+    "paho-mqtt",
+    "numpy>=2.0.2",
 ]
 
 [project.urls]
@@ -137,3 +144,7 @@ commands = [
 	"sudo raspi-config nonint do_serial_cons 1",
 	"sudo raspi-config nonint do_serial_hw 0"
 ]
+
+[[tool.uv.index]]
+url = "https://www.piwheels.org/simple"
+default = true
